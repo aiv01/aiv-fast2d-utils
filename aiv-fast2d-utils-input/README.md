@@ -19,20 +19,20 @@ while (window.opened)
 ```
 #Keyboards events:
 You have three states for each value in **_KeyCode_** enum:
-+ Input.IsKeyDown(KeyCode key);		//return true only the first frame it is pressed
-+ Input.IsKeyUp(KeyCode key);		//return true only the first frame it is released
-+ Input.IsKeyPressed(KeyCode key);    	//return true if hold, otherwise false
++ Input.IsKeyDown(KeyCode key);		_//return true only the first frame it is pressed_
++ Input.IsKeyUp(KeyCode key);		_//return true only the first frame it is released_
++ Input.IsKeyPressed(KeyCode key);    	_//return true if hold, otherwise false_
 
 #Mouse events:
 You have three states for each value in **_MouseButton_** enum:
-+ Input.IsMouseButtonDown(MouseButton button);		//return true only the first frame it is pressed
-+ Input.IsMouseButtonUp(MouseButton button);		//return true only the first frame it is released
-+ Input.IsMouseButtonPressed(MouseButton button);    	//return true if hold, otherwise false
++ Input.IsMouseButtonDown(MouseButton button);          _//return true only the first frame it is pressed_
++ Input.IsMouseButtonUp(MouseButton button);		_//return true only the first frame it is released_
++ Input.IsMouseButtonPressed(MouseButton button);    	_//return true if hold, otherwise false_
 You can get MousePosition too;
 
 #Joystick events:
 You have three states for each value in **_JoystickButton_** enum (you have to provide the **_JoystickIndex_**):
-+ Input.IsJoystickButtonDown(JoystickButton button, JoystickIndex index);	//return true only the first frame it is pressed
-+ Input.IsJoystickButtonUp(JoystickButton button, JoystickIndex index);		//return true only the first frame it is released
-+ Input.IsJoystickButtonPressed(JoystickButton button, JoystickIndex index);    //return true if hold, otherwise false
++ Input.IsJoystickButtonDown(JoystickButton button, JoystickIndex index);	_//return true only the first frame it is pressed_
++ Input.IsJoystickButtonUp(JoystickButton button, JoystickIndex index);		_//return true only the first frame it is released_
++ Input.IsJoystickButtonPressed(JoystickButton button, JoystickIndex index);    _//return true if hold, otherwise false_
 You can get the other events of Joystick too;
