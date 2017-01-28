@@ -1,10 +1,11 @@
 # aiv-fast2d-utils-input
 The *Input.cs* static class supplies a better input management than *Window.cs* does;
-In order to work with this, you have to add Fast2D and OpenTK libraries as dependencies to the project
+In order to work with this, you have to add Fast2D and OpenTK libraries as dependencies in your project
 (you can download them from NuGet or you can find them at these repositories: [Fast2D](https://github.com/aiv01/aiv-fast2d) and [OpenTK](https://github.com/aiv01/opentk)).
 
 #First Setup:
 Call Input.Update(Window window) at the start of every frame, providing it the game window:
+```cs
 Window window = new Window("TEST");
 while (window.opened)
 {
@@ -14,7 +15,7 @@ while (window.opened)
 
 	window.Update();
 }
-
+```
 #Keyboards events:
 You have three states for each value in *KeyCode* enum:
 + Input.IsKeyDown(KeyCode key);		//return true only the first frame it is pressed
