@@ -28,6 +28,7 @@ You have three states for each value in **_MouseButton_** enum:
 + Input.IsMouseButtonDown(MouseButton button);          _//return true only the first frame it is pressed_
 + Input.IsMouseButtonUp(MouseButton button);		_//return true only the first frame it is released_
 + Input.IsMouseButtonPressed(MouseButton button);    	_//return true if hold, otherwise false_
+
 You can get MousePosition too;
 
 #Joystick events:
@@ -35,4 +36,5 @@ You have three states for each value in **_JoystickButton_** enum (you have to p
 + Input.IsJoystickButtonDown(JoystickButton button, JoystickIndex index);	_//return true only the first frame it is pressed_
 + Input.IsJoystickButtonUp(JoystickButton button, JoystickIndex index);		_//return true only the first frame it is released_
 + Input.IsJoystickButtonPressed(JoystickButton button, JoystickIndex index);    _//return true if hold, otherwise false_
+
 You can get the other events of Joystick too;
