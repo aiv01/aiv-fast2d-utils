@@ -12,17 +12,7 @@ namespace Aiv.Fast2D.Utils.Input
     {
         Left,
         Middle,
-        Right,
-        Button1,
-        Button2,
-        Button3,
-        Button4,
-        Button5,
-        Button6,
-        Button7,
-        Button8,
-        Button9,
-
+        Right
     }
     public enum JoystickButton
     {
@@ -86,7 +76,7 @@ namespace Aiv.Fast2D.Utils.Input
         public static void Update(Window window)
         {
             Window = window;
-            
+
             //Keyboard Update
             foreach (var item in keys)
                 item.Value.Update(window.GetKey(item.Key));
@@ -95,16 +85,6 @@ namespace Aiv.Fast2D.Utils.Input
             mouseButtons[MouseButton.Left].Update(window.mouseLeft);
             mouseButtons[MouseButton.Middle].Update(window.mouseMiddle);
             mouseButtons[MouseButton.Right].Update(window.mouseRight);
-            mouseButtons[MouseButton.Button1].Update(window.context.Mouse.GetState().IsButtonDown(OpenTK.Input.MouseButton.Button1));
-            mouseButtons[MouseButton.Button2].Update(window.context.Mouse.GetState().IsButtonDown(OpenTK.Input.MouseButton.Button2));
-            mouseButtons[MouseButton.Button3].Update(window.context.Mouse.GetState().IsButtonDown(OpenTK.Input.MouseButton.Button3));
-            mouseButtons[MouseButton.Button4].Update(window.context.Mouse.GetState().IsButtonDown(OpenTK.Input.MouseButton.Button4));
-            mouseButtons[MouseButton.Button5].Update(window.context.Mouse.GetState().IsButtonDown(OpenTK.Input.MouseButton.Button5));
-            mouseButtons[MouseButton.Button6].Update(window.context.Mouse.GetState().IsButtonDown(OpenTK.Input.MouseButton.Button6));
-            mouseButtons[MouseButton.Button7].Update(window.context.Mouse.GetState().IsButtonDown(OpenTK.Input.MouseButton.Button7));
-            mouseButtons[MouseButton.Button8].Update(window.context.Mouse.GetState().IsButtonDown(OpenTK.Input.MouseButton.Button8));
-            mouseButtons[MouseButton.Button9].Update(window.context.Mouse.GetState().IsButtonDown(OpenTK.Input.MouseButton.Button9));
-
 
             MouseX = window.mouseX;
             MouseY = window.mouseY;

@@ -1,8 +1,0 @@
-C:\Users\Matia\Documents\GitHub\aiv-fast2d-utils\aiv-fast2d-utils-input\bin\Debug\aiv-fast2d-utils-input.dll
-C:\Users\Matia\Documents\GitHub\aiv-fast2d-utils\aiv-fast2d-utils-input\bin\Debug\aiv-fast2d-utils-input.pdb
-C:\Users\Matia\Documents\GitHub\aiv-fast2d-utils\aiv-fast2d-utils-input\bin\Debug\aiv-fast2d.dll
-C:\Users\Matia\Documents\GitHub\aiv-fast2d-utils\aiv-fast2d-utils-input\bin\Debug\OpenTK.dll
-C:\Users\Matia\Documents\GitHub\aiv-fast2d-utils\aiv-fast2d-utils-input\bin\Debug\OpenTK.xml
-C:\Users\Matia\Documents\GitHub\aiv-fast2d-utils\aiv-fast2d-utils-input\obj\Debug\aiv-fast2d-utils-input.csprojResolveAssemblyReference.cache
-C:\Users\Matia\Documents\GitHub\aiv-fast2d-utils\aiv-fast2d-utils-input\obj\Debug\aiv-fast2d-utils-input.dll
-C:\Users\Matia\Documents\GitHub\aiv-fast2d-utils\aiv-fast2d-utils-input\obj\Debug\aiv-fast2d-utils-input.pdb
