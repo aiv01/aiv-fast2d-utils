@@ -1,6 +1,6 @@
 namespace Aiv.Fast2D.Utils.TextureHelper
 {
-	public static class TextureHelper
+    public static class TextureHelper
     {
         /// <summary>
         /// It will generates a single decompressed texture inside giving it's source name path.
