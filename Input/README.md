@@ -16,6 +16,10 @@ while (window.opened)
 	{
 		Console.WriteLine( "KEY DOWN" );
 	}
+	if ( Input.IsKeyUp( KeyCode.Space ) )
+	{
+		Console.WriteLine( "KEY UP" );
+	}
 
 	window.Update();
 }
