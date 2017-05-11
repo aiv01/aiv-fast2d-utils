@@ -12,7 +12,10 @@ while (window.opened)
 {
 	Input.Update(window);
 
-	//Game
+	if ( Input.IsKeyDown( KeyCode.Space ) )
+	{
+		Console.WriteLine( "KEY DOWN" );
+	}
 
 	window.Update();
 }
