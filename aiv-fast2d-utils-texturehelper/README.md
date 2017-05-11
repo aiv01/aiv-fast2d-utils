@@ -33,3 +33,11 @@ while(window.opened)
 	}
 }
 ```
+
+You can also Decompress a big list of textures inside a folder, Following an example how to do it:
+
+```cs
+bool recursiveLoop = false; // this loop will loop through all sub directories under "FolderDirectory" given as entry parameter
+TextureHelper.GenerateDecompressedTextureFromFolder("FolderDirectory", "NewFolderName", recursiveLoop);
+```
+
