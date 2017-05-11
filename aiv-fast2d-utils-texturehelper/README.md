@@ -7,8 +7,29 @@ In order to work with this, you have to add Fast2D and OpenTK libraries as depen
 #How to use it:
 + You have to create a new empty project and import this utility (use it in Editor mode)
 + Your file will be generated and placed inside <yourproject>//bin//Debug folder
++ The new generated file will have ".txt" as default extension;
 + Following an example of use:
 
 ```cs
 TextureHelper.GenerateDecompressedTextureFromFile("MyTexture.png");
+```
+
+#How to load decompressed Texture:
+```cs
+Window window = new Window("Test");
+
+while(window.opened)
+{
+	//Load it after you decompressed it.
+	Texture loadedTexture = LoadDecompressedTexture(WidthSize, HeightSize, "MyTexture.txt");
+	
+	//Create a 3D mesh and draw the mesh with loaded texture.
+	Mesh3[] newMesh = ObjLoaded.Load("MyModel.obj", size);
+	
+	//Loop through array and draw the texture.
+	foreach(Mesh3[] item in meshes)
+	{
+	    item.DrawTexture(loadedTexture);
+	}
+}
 ```
