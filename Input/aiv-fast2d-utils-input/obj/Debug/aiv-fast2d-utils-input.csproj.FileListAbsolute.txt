@@ -1,7 +1,9 @@
-C:\Users\Sabaudio\Documents\GitHub\aiv-fast2d-utils\aiv-fast2d-utils-input\bin\Debug\aiv-fast2d-utils-input.dll
-C:\Users\Sabaudio\Documents\GitHub\aiv-fast2d-utils\aiv-fast2d-utils-input\bin\Debug\aiv-fast2d-utils-input.pdb
-C:\Users\Sabaudio\Documents\GitHub\aiv-fast2d-utils\aiv-fast2d-utils-input\bin\Debug\aiv-fast2d.dll
-C:\Users\Sabaudio\Documents\GitHub\aiv-fast2d-utils\aiv-fast2d-utils-input\bin\Debug\OpenTK.dll
-C:\Users\Sabaudio\Documents\GitHub\aiv-fast2d-utils\aiv-fast2d-utils-input\bin\Debug\OpenTK.xml
-C:\Users\Sabaudio\Documents\GitHub\aiv-fast2d-utils\aiv-fast2d-utils-input\obj\Debug\aiv-fast2d-utils-input.dll
-C:\Users\Sabaudio\Documents\GitHub\aiv-fast2d-utils\aiv-fast2d-utils-input\obj\Debug\aiv-fast2d-utils-input.pdb
+C:\Users\Sabaudio\Desktop\Input\aiv-fast2d-utils-input\bin\Debug\aiv-fast2d-utils-input.dll.config
+C:\Users\Sabaudio\Desktop\Input\aiv-fast2d-utils-input\bin\Debug\aiv-fast2d-utils-input.dll
+C:\Users\Sabaudio\Desktop\Input\aiv-fast2d-utils-input\bin\Debug\aiv-fast2d-utils-input.pdb
+C:\Users\Sabaudio\Desktop\Input\aiv-fast2d-utils-input\bin\Debug\aiv-fast2d.dll
+C:\Users\Sabaudio\Desktop\Input\aiv-fast2d-utils-input\bin\Debug\aiv-fast3d.dll
+C:\Users\Sabaudio\Desktop\Input\aiv-fast2d-utils-input\bin\Debug\OpenTK.dll
+C:\Users\Sabaudio\Desktop\Input\aiv-fast2d-utils-input\bin\Debug\OpenTK.xml
+C:\Users\Sabaudio\Desktop\Input\aiv-fast2d-utils-input\obj\Debug\aiv-fast2d-utils-input.dll
+C:\Users\Sabaudio\Desktop\Input\aiv-fast2d-utils-input\obj\Debug\aiv-fast2d-utils-input.pdb

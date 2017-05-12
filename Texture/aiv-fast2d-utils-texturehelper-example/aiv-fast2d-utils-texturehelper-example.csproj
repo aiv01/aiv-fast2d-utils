@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A81F51E3-ACE7-4B33-8BCF-0A3BC45F3D29}</ProjectGuid>
+    <ProjectGuid>{51614535-B07D-4087-BE7E-A6DF2DB1F07D}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Aiv.Fast2D.Utils.TextureHelper.Example</RootNamespace>
     <AssemblyName>aiv-fast2d-utils-texturehelper-example</AssemblyName>
@@ -61,7 +61,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\aiv-fast2d-utils-texturehelper\aiv-fast2d-utils-texturehelper.csproj">
-      <Project>{a6e8fd7c-94b6-4013-a3f6-d3ddc474e717}</Project>
+      <Project>{f11207b7-6e51-439c-a232-27f89fb5bd64}</Project>
       <Name>aiv-fast2d-utils-texturehelper</Name>
     </ProjectReference>
   </ItemGroup>

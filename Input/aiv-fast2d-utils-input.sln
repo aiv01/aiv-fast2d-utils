@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aiv-fast2d-utils-input", "aiv-fast2d-utils-input\aiv-fast2d-utils-input.csproj", "{CF2FCEA3-48F3-4BB2-9DD7-C1EC6EF646A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "aiv-fast2d-utils-input-example", "aiv-fast2d-utils-input-example\aiv-fast2d-utils-input-example.csproj", "{342A0A71-7375-4B54-8EC1-C295BCD3D8D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CF2FCEA3-48F3-4BB2-9DD7-C1EC6EF646A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CF2FCEA3-48F3-4BB2-9DD7-C1EC6EF646A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CF2FCEA3-48F3-4BB2-9DD7-C1EC6EF646A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CF2FCEA3-48F3-4BB2-9DD7-C1EC6EF646A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{342A0A71-7375-4B54-8EC1-C295BCD3D8D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{342A0A71-7375-4B54-8EC1-C295BCD3D8D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{342A0A71-7375-4B54-8EC1-C295BCD3D8D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{342A0A71-7375-4B54-8EC1-C295BCD3D8D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

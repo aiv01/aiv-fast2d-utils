@@ -58,6 +58,16 @@ namespace Aiv.Fast2D.Utils.Input
 			Input.mouseButtons[MouseButton.Middle].Update( window.mouseMiddle );
 			Input.mouseButtons[MouseButton.Right].Update( window.mouseRight );
 
+			Input.mouseButtons[MouseButton.Button1].Update( window.context.Mouse.GetState().IsButtonDown( OpenTK.Input.MouseButton.Button1 ) );
+			Input.mouseButtons[MouseButton.Button2].Update( window.context.Mouse.GetState().IsButtonDown( OpenTK.Input.MouseButton.Button2 ) );
+			Input.mouseButtons[MouseButton.Button3].Update( window.context.Mouse.GetState().IsButtonDown( OpenTK.Input.MouseButton.Button3 ) );
+			Input.mouseButtons[MouseButton.Button4].Update( window.context.Mouse.GetState().IsButtonDown( OpenTK.Input.MouseButton.Button4 ) );
+			Input.mouseButtons[MouseButton.Button5].Update( window.context.Mouse.GetState().IsButtonDown( OpenTK.Input.MouseButton.Button5 ) );
+			Input.mouseButtons[MouseButton.Button6].Update( window.context.Mouse.GetState().IsButtonDown( OpenTK.Input.MouseButton.Button6 ) );
+			Input.mouseButtons[MouseButton.Button7].Update( window.context.Mouse.GetState().IsButtonDown( OpenTK.Input.MouseButton.Button7 ) );
+			Input.mouseButtons[MouseButton.Button8].Update( window.context.Mouse.GetState().IsButtonDown( OpenTK.Input.MouseButton.Button8 ) );
+			Input.mouseButtons[MouseButton.Button9].Update( window.context.Mouse.GetState().IsButtonDown( OpenTK.Input.MouseButton.Button9 ) );
+
 			Input.MouseX = window.mouseX;
 			Input.MouseY = window.mouseY;
 			Input.MousePosition = window.mousePosition;
