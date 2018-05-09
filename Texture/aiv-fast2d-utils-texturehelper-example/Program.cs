@@ -28,30 +28,29 @@ namespace Aiv.Fast2D.Utils.TextureHelper.Example
              * do decompression in single project which is not
              * a part of your own working project.
              */
-            TextureHelper.GenerateDecompressedTextureFromFile("Textures/GasFuel.png");
+            TextureHelper.GenerateDecompressedTextureFromFile("Assets/drum1_ambient.png", "NewAssets");
 
             //Decompress Textures from list of files (Has to be called only once)
-            //TextureHelper.GenerateDecompressedTexturesFromFolder("Textures", "Decompressed");
+            //bool bRecursive = false;
+            //string sExtension = "tex";
+            //TextureHelper.GenerateDecompressedTexturesFromFolder("Assets", "NewAssets", bRecursive, sExtension);
             #endregion
 
             #region LoadDecompressedTexture
             //Return decompressed texture and save it.
-            Texture loadedTexture = TextureHelper.LoadDecompressedTexture(2048, 2048, "GasFuel.txt");
+            Texture loadedTexture = TextureHelper.LoadDecompressedTexture("GasFuel.txt");
             #endregion
 
             #region LoadOBJModel
             //Create a Mesh3[] to load custo ".obj"'s model
-            Mesh3[] meshes = ObjLoader.Load("Models/GasFuel.obj", Vector3.One * size);
+            Mesh3 mesh = ObjLoader.Load("Assets/GasFuel.obj", Vector3.One * size)[0];
             #endregion
 
             #region GameLoop
             while (window.opened)
             {
-                //Loop through array and draw texture.
-                foreach (var item in meshes)
-                {
-                    item.DrawTexture(loadedTexture);
-                }
+                //draw the mesh
+                mesh.DrawTexture(loadedTexture);
 
                 //Break while loop
                 if (window.GetKey(KeyCode.Esc))
