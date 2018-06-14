@@ -24,7 +24,7 @@ namespace Aiv.Fast2D.Utils.TextureHelper
 
             string singleFileName = Path.GetFileNameWithoutExtension(fileName);
 
-            if (File.Exists(dirInfo.Name + "/" + singleFileName + "." + extension))
+            if (File.Exists(dirInfo.FullName + "/" + singleFileName + "." + extension))
                 return;
 
             WriteFile(fileName);
@@ -113,8 +113,6 @@ namespace Aiv.Fast2D.Utils.TextureHelper
             if (!File.Exists(fileName))
                 throw new ArgumentException("File not found");
 
-            outTex = null;
-
             using (FileStream fs = File.OpenRead(fileName))
             {
                 byte[] hashCode = new byte[4];
@@ -144,7 +142,7 @@ namespace Aiv.Fast2D.Utils.TextureHelper
             Texture texture = new Texture(fileName);
             string singleFileName = Path.GetFileNameWithoutExtension(fileName);
 
-            using (FileStream fs = File.OpenWrite(dirInfo.Name + "/" + singleFileName + "." + extension))
+            using (FileStream fs = File.OpenWrite(dirInfo.FullName + "/" + singleFileName + "." + extension))
             {
                 byte[] data = new byte[sizeof(int) * 3 + texture.Bitmap.Length];
 
