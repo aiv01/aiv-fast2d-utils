@@ -108,10 +108,10 @@
     <Content Include="Assets\SubAssets\Child01\drum1_roughness.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\SubAssets\drum2_ambient.png">
+    <Content Include="Assets\SubAssets\Child01\drum2_ambient.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Assets\SubAssets\drum2_base_color.png">
+    <Content Include="Assets\SubAssets\Child01\drum2_base_color.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
