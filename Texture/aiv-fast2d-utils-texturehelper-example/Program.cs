@@ -17,7 +17,9 @@ namespace Aiv.Fast2D.Utils.TextureHelper.Example
 
             #region InstanceWindow
             //Instance new window
-            Window window = new Window(1024, 768, "Test", false, 16, 4);
+            Window window = new Window(800, 600, "Test", false, 16, 4);
+            window.EnableDepthTest();
+            PerspectiveCamera cam = new PerspectiveCamera(Vector3.Zero, new Vector3(0, 0, 0), 60, 0.1f, 1000);
             #endregion
 
             #region DecompressTexture
@@ -28,29 +30,37 @@ namespace Aiv.Fast2D.Utils.TextureHelper.Example
              * do decompression in single project which is not
              * a part of your own working project.
              */
-            TextureHelper.GenerateDecompressedTextureFromFile("Assets/drum1_ambient.png", "NewAssets");
+
+            string filepth = "Assets/SubAssets/Child01/drum1_roughness.png";
+            TextureHelper.GenerateDecompressedTextureFromFile(filepth, "Assets/SubAssets/Child01/AssetsNew");
 
             //Decompress Textures from list of files (Has to be called only once)
-            //bool bRecursive = false;
-            //string sExtension = "tex";
-            //TextureHelper.GenerateDecompressedTexturesFromFolder("Assets", "NewAssets", bRecursive, sExtension);
+            //TextureHelper.GenerateDecompressedTexturesFromFolder("Assets", "AssetsNew");
             #endregion
 
             #region LoadDecompressedTexture
             //Return decompressed texture and save it.
-            Texture loadedTexture = TextureHelper.LoadDecompressedTexture("GasFuel.txt");
+            Texture loadedTexture = TextureHelper.LoadDecompressedTexture("Assets/SubAssets/Child01/AssetsNew/drum1_roughness.tex");
             #endregion
 
             #region LoadOBJModel
             //Create a Mesh3[] to load custo ".obj"'s model
-            Mesh3 mesh = ObjLoader.Load("Assets/GasFuel.obj", Vector3.One * size)[0];
+            Mesh3[] meshes = ObjLoader.Load("Assets/barrels_obj.obj", Vector3.One);
+
+            foreach (var item in meshes)
+            {
+                item.Position3 += new Vector3(0, 0, 200);
+            }
             #endregion
 
             #region GameLoop
             while (window.opened)
             {
-                //draw the mesh
-                mesh.DrawTexture(loadedTexture);
+                //Loop through array and draw texture.
+                foreach (var item in meshes)
+                {
+                    item.DrawTexture(loadedTexture);
+                }
 
                 //Break while loop
                 if (window.GetKey(KeyCode.Esc))

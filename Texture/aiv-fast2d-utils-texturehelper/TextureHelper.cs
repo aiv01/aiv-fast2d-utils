@@ -15,16 +15,20 @@ namespace Aiv.Fast2D.Utils.TextureHelper
         /// <param name="fileName">Name of the file that will be decompressed.</param>
         /// <param name="newDirectoryName">Name of the new directory that the decompressed file will be put into.</param>
         /// <param name="targetExtensionName">Extension name of the new file that will be created. Def is 'tex' - stands for 'Texture'</param>
-        public static void GenerateDecompressedTextureFromFile(string fileName, string newDirectoryName, string targetExtensionName = "tex")
+        public static void GenerateDecompressedTextureFromFile(string fileName, string newDirectoryName = default(string), string targetExtensionName = "tex")
         {
-            Validate(fileName, newDirectoryName);
+            Validate(fileName);
 
-            dirInfo = Directory.CreateDirectory(newDirectoryName);
+            if (!string.IsNullOrEmpty(newDirectoryName))
+                dirInfo = Directory.CreateDirectory(newDirectoryName);
+            else
+                dirInfo = new DirectoryInfo(fileName).Parent;
+
             extension = targetExtensionName;
 
             string singleFileName = Path.GetFileNameWithoutExtension(fileName);
 
-            if (File.Exists(dirInfo.Name + "/" + singleFileName + "." + extension))
+            if (File.Exists(dirInfo.FullName + "/" + singleFileName + "." + extension))
                 return;
 
             WriteFile(fileName);
@@ -38,20 +42,25 @@ namespace Aiv.Fast2D.Utils.TextureHelper
         /// <param name="recursive">A recursive loop
         /// <param name="targetExtensionName">Extension which the file will be created</param>
         /// checking through all sub directories</param>
-        public static void GenerateDecompressedTexturesFromFolder(string targetDirectory, string newDirectoryName, bool recursive = false, string targetExtensionName = "tex")
+        public static void GenerateDecompressedTexturesFromFolder(string targetDirectory, string newDirectoryName = default(string), bool recursive = false, string targetExtensionName = "tex")
         {
-            Validate(targetDirectory, newDirectoryName);
+            Validate(targetDirectory);
 
             string[] entriesFiles = GetFiles(targetDirectory, "*.png|*.jpeg|*.bmp");
-            dirInfo = Directory.CreateDirectory(newDirectoryName);
+
+            if(!string.IsNullOrEmpty(newDirectoryName))
+                dirInfo = Directory.CreateDirectory(newDirectoryName);
+            else
+                dirInfo = new DirectoryInfo(entriesFiles[0]).Parent;
+
             extension = targetExtensionName;
 
             foreach (string fileName in entriesFiles)
             {
                 string fileNameNoExt = Path.GetFileNameWithoutExtension(fileName);
 
-                if (File.Exists(dirInfo.Name + "/" + fileNameNoExt + "." + extension))
-                    return;
+                if (File.Exists(dirInfo.FullName + "/" + fileNameNoExt + "." + extension))
+                    continue;
 
                 WriteFile(fileName);
             }
@@ -113,8 +122,6 @@ namespace Aiv.Fast2D.Utils.TextureHelper
             if (!File.Exists(fileName))
                 throw new ArgumentException("File not found");
 
-            outTex = null;
-
             using (FileStream fs = File.OpenRead(fileName))
             {
                 byte[] hashCode = new byte[4];
@@ -144,7 +151,7 @@ namespace Aiv.Fast2D.Utils.TextureHelper
             Texture texture = new Texture(fileName);
             string singleFileName = Path.GetFileNameWithoutExtension(fileName);
 
-            using (FileStream fs = File.OpenWrite(dirInfo.Name + "/" + singleFileName + "." + extension))
+            using (FileStream fs = File.OpenWrite(dirInfo.FullName + "/" + singleFileName + "." + extension))
             {
                 byte[] data = new byte[sizeof(int) * 3 + texture.Bitmap.Length];
 
